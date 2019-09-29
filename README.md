@@ -1,6 +1,4 @@
 # StylableNavigationBar
-
-[![CI Status](https://img.shields.io/travis/Pavlo Chernovolenko/StylableNavigationBar.svg?style=flat)](https://travis-ci.org/Pavlo Chernovolenko/StylableNavigationBar)
 [![Version](https://img.shields.io/cocoapods/v/StylableNavigationBar.svg?style=flat)](https://cocoapods.org/pods/StylableNavigationBar)
 [![License](https://img.shields.io/cocoapods/l/StylableNavigationBar.svg?style=flat)](https://cocoapods.org/pods/StylableNavigationBar)
 [![Platform](https://img.shields.io/cocoapods/p/StylableNavigationBar.svg?style=flat)](https://cocoapods.org/pods/StylableNavigationBar)
