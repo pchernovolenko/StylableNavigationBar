@@ -15,17 +15,13 @@ public enum NavigationControllerStyle {
     case custom(style: NavigationBarStyleProtocol)
 }
 
-// A protocol wich allow UIViewController to specify it's navigation bar style preferences.
-// You dont have to make all navigation controller childs as CSNavigationBarStylable,
-// a root view controller's prefered style will be applyed for all childs if they are not CSNavigationBarStylable.
-
+// A protocol wich allow UIViewController to specify it's navigation bar style preferences
 public protocol NavigationBarStylable: class {
     var navigationBarStyle: NavigationControllerStyle? { get }
 }
 
 public extension NavigationBarStylable {
     
-    // The default navigationBarStyle is white
     var navigationBarStyle: NavigationControllerStyle? {
         return .default
     }
@@ -81,10 +77,10 @@ open class StylableNavigationController: UINavigationController {
             self.setNavigationBarStyleFor(style)
         }
         
-        // - Let's start pop action or we can't get transitionCoordinator()
+        // Let's start pop action or we can't get transitionCoordinator()
         let popViewController = super.popViewController(animated: animated)
         
-        // - Secure situation if user cancelled transition
+        // Secure situation if user cancelled transition
         transitionCoordinator?.animate(alongsideTransition: nil, completion: { [weak self] _ in
             guard let style = self?.topViewController else { return }
             self?.setNavigationBarStyleFor(style)
@@ -111,19 +107,7 @@ private extension StylableNavigationController {
         guard
             let stylableController = viewController as? NavigationBarStylable,
             let style = stylableController.navigationBarStyle
-            else {
-                self.setDefaultNavigationBarStyleFor(viewController)
-                return
-        }
-        self.applyNavigationBarStyle(style, for: viewController)
-    }
-    
-    // Apply root's navigation bar style for ViewController
-    func setDefaultNavigationBarStyleFor(_ viewController: UIViewController) {
-        guard
-            let rootVC = self.viewControllers.first as? NavigationBarStylable,
-            let style = rootVC.navigationBarStyle
-            else { return }
+        else { return }
         self.applyNavigationBarStyle(style, for: viewController)
     }
     
