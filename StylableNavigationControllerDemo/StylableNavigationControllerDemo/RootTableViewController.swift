@@ -10,6 +10,8 @@ import UIKit
 
 class RootTableViewController: UITableViewController {
 
+    let barStyle = AppSecondaryNavigationBarStyle()
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 0
@@ -23,6 +25,6 @@ class RootTableViewController: UITableViewController {
 extension RootTableViewController: NavigationBarStylable {
     
     var navigationBarStyle: NavigationControllerStyle? {
-        return .lightTinted(tintColor: .lightGray)
+        return .custom(style: barStyle)
     }
 }

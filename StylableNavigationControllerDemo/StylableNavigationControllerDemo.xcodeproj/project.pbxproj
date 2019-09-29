@@ -14,6 +14,10 @@
 		8DC6B65523410C3D00EFDBDA /* StylableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6B65423410C3D00EFDBDA /* StylableNavigationController.swift */; };
 		8DC6B65723410E3B00EFDBDA /* UINavigationController+CompletionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6B65623410E3B00EFDBDA /* UINavigationController+CompletionExtensions.swift */; };
 		8DC6B6592341111A00EFDBDA /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC6B6582341111A00EFDBDA /* RootTableViewController.swift */; };
+		8DFC0BC723412E680099D5AA /* BasicNavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC0BC623412E680099D5AA /* BasicNavigationBarStyle.swift */; };
+		8DFC0BC9234130810099D5AA /* UINavigationBar+Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC0BC8234130810099D5AA /* UINavigationBar+Stylable.swift */; };
+		8DFC0BCC234136250099D5AA /* AppPrimaryNavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC0BCB234136250099D5AA /* AppPrimaryNavigationBarStyle.swift */; };
+		8DFC0BCE234136590099D5AA /* AppSecondaryNavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC0BCD234136590099D5AA /* AppSecondaryNavigationBarStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		8DC6B65423410C3D00EFDBDA /* StylableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylableNavigationController.swift; sourceTree = "<group>"; };
 		8DC6B65623410E3B00EFDBDA /* UINavigationController+CompletionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+CompletionExtensions.swift"; sourceTree = "<group>"; };
 		8DC6B6582341111A00EFDBDA /* RootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
+		8DFC0BC623412E680099D5AA /* BasicNavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNavigationBarStyle.swift; sourceTree = "<group>"; };
+		8DFC0BC8234130810099D5AA /* UINavigationBar+Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Stylable.swift"; sourceTree = "<group>"; };
+		8DFC0BCB234136250099D5AA /* AppPrimaryNavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPrimaryNavigationBarStyle.swift; sourceTree = "<group>"; };
+		8DFC0BCD234136590099D5AA /* AppSecondaryNavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecondaryNavigationBarStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				8DC6B65323410BFB00EFDBDA /* StylableNavigationController */,
+				8DFC0BCA234136030099D5AA /* NavigationBarStyles */,
 				8DC6B64123410BC400EFDBDA /* AppDelegate.swift */,
 				8DC6B6582341111A00EFDBDA /* RootTableViewController.swift */,
 				8DC6B64523410BC400EFDBDA /* Main.storyboard */,
-				8DC6B64823410BC500EFDBDA /* Assets.xcassets */,
 				8DC6B64A23410BC500EFDBDA /* LaunchScreen.storyboard */,
+				8DC6B64823410BC500EFDBDA /* Assets.xcassets */,
 				8DC6B64D23410BC500EFDBDA /* Info.plist */,
 			);
 			path = StylableNavigationControllerDemo;
@@ -73,9 +82,20 @@
 			isa = PBXGroup;
 			children = (
 				8DC6B65423410C3D00EFDBDA /* StylableNavigationController.swift */,
+				8DFC0BC623412E680099D5AA /* BasicNavigationBarStyle.swift */,
 				8DC6B65623410E3B00EFDBDA /* UINavigationController+CompletionExtensions.swift */,
+				8DFC0BC8234130810099D5AA /* UINavigationBar+Stylable.swift */,
 			);
 			path = StylableNavigationController;
+			sourceTree = "<group>";
+		};
+		8DFC0BCA234136030099D5AA /* NavigationBarStyles */ = {
+			isa = PBXGroup;
+			children = (
+				8DFC0BCB234136250099D5AA /* AppPrimaryNavigationBarStyle.swift */,
+				8DFC0BCD234136590099D5AA /* AppSecondaryNavigationBarStyle.swift */,
+			);
+			path = NavigationBarStyles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DFC0BCC234136250099D5AA /* AppPrimaryNavigationBarStyle.swift in Sources */,
 				8DC6B64223410BC400EFDBDA /* AppDelegate.swift in Sources */,
 				8DC6B65523410C3D00EFDBDA /* StylableNavigationController.swift in Sources */,
+				8DFC0BC723412E680099D5AA /* BasicNavigationBarStyle.swift in Sources */,
+				8DFC0BC9234130810099D5AA /* UINavigationBar+Stylable.swift in Sources */,
 				8DC6B65723410E3B00EFDBDA /* UINavigationController+CompletionExtensions.swift in Sources */,
+				8DFC0BCE234136590099D5AA /* AppSecondaryNavigationBarStyle.swift in Sources */,
 				8DC6B6592341111A00EFDBDA /* RootTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

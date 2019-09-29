@@ -12,6 +12,7 @@ public enum NavigationControllerStyle {
     case `default`
     case darkTinted(tintColor: UIColor)
     case lightTinted(tintColor: UIColor)
+    case custom(style: NavigationBarStyleProtocol)
 }
 
 // A protocol wich allow UIViewController to specify it's navigation bar style preferences.
@@ -47,10 +48,12 @@ open class StylableNavigationController: UINavigationController {
             return .lightContent
         case .lightTinted:
             if #available(iOS 13.0, *) {
-                return .darkContent
+                return .default
             } else {
                 return .default
             }
+        case let .custom(style):
+            return style.statusBarStyle
         default:
             return .default
         }
@@ -125,31 +128,15 @@ private extension StylableNavigationController {
     }
     
     func applyNavigationBarStyle(_ style: NavigationControllerStyle, for viewController: UIViewController) {
-        
-        let barColor: UIColor
-        let barTintColor: UIColor
-        
         switch style {
         case .default:
-            navigationBar.isTranslucent = false
-            barColor = .red
-            barTintColor = .white
+            self.navigationBar.applyColors(barColor: nil, barTintColor: .black)
         case let .darkTinted(tintColor):
-            navigationBar.isTranslucent = false
-            barColor = tintColor
-            barTintColor = .white
+            self.navigationBar.applyColors(barColor: tintColor, barTintColor: .white)
         case let .lightTinted(tintColor):
-            navigationBar.isTranslucent = false
-            barColor = tintColor
-            barTintColor = UIColor.black
+            self.navigationBar.applyColors(barColor: tintColor, barTintColor: .black)
+        case let .custom(style):
+            self.navigationBar.applyStyle(style)
         }
-        
-        self.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: barTintColor,
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)
-        ]
-        self.navigationBar.tintColor = barTintColor
-        self.navigationBar.barTintColor = barColor
-        self.view.backgroundColor = barColor
     }
 }

@@ -25,9 +25,9 @@ extension UINavigationController {
     }
 }
 
-// gives control of the status bar appearance to the top controller
 extension UINavigationController {
     
+    // Gives control of the status bar appearance to the top controller
     override open var childForStatusBarHidden: UIViewController? {
         return self.topViewController
     }
