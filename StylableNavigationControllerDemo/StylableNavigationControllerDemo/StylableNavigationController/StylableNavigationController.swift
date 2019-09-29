@@ -34,6 +34,28 @@ open class StylableNavigationController: UINavigationController {
     
     // MARK: Overrides
     
+    // Apply status bar style for ViewController
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        guard
+            let viewController = topViewController as? NavigationBarStylable,
+            let navBarStyle = viewController.navigationBarStyle
+        else {
+            return super.preferredStatusBarStyle
+        }
+        switch navBarStyle {
+        case .darkTinted:
+            return .lightContent
+        case .lightTinted:
+            if #available(iOS 13.0, *) {
+                return .darkContent
+            } else {
+                return .default
+            }
+        default:
+            return .default
+        }
+    }
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         guard let rootViewController = self.viewControllers.first else { return }
@@ -66,11 +88,6 @@ open class StylableNavigationController: UINavigationController {
         })
         
         return popViewController
-    }
-    
-    override open var preferredStatusBarStyle: UIStatusBarStyle {
-        guard let viewController = topViewController else { return super.preferredStatusBarStyle }
-        return viewController.preferredStatusBarStyle
     }
     
     open func setNeedsNavigationBarAppearanceUpdate() {
@@ -127,6 +144,10 @@ private extension StylableNavigationController {
             barTintColor = UIColor.black
         }
         
+        self.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: barTintColor,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)
+        ]
         self.navigationBar.tintColor = barTintColor
         self.navigationBar.barTintColor = barColor
         self.view.backgroundColor = barColor
