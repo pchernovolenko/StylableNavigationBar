@@ -1,0 +1,6 @@
+framework module StylableNavigationBar {
+  umbrella header "StylableNavigationBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
