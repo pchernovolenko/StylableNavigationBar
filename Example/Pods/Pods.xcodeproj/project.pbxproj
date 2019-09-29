@@ -131,10 +131,7 @@
 		40560C540502372C4CB9D5F61749106B /* StylableNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				8DFC0BD0234140810099D5AA /* BasicNavigationBarStyle.swift */,
-				8DFC0BD2234140820099D5AA /* StylableNavigationController.swift */,
-				8DFC0BD1234140810099D5AA /* UINavigationBar+Stylable.swift */,
-				8DFC0BD3234140820099D5AA /* UINavigationController+CompletionExtensions.swift */,
+				8DFC0BE6234147C70099D5AA /* Classes */,
 				70E1A39971F0D11E44730C551DEB58DA /* Pod */,
 				465D97123C21FA33255887BF3D3F2AF2 /* Support Files */,
 			);
@@ -188,6 +185,18 @@
 				40560C540502372C4CB9D5F61749106B /* StylableNavigationBar */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8DFC0BE6234147C70099D5AA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8DFC0BD0234140810099D5AA /* BasicNavigationBarStyle.swift */,
+				8DFC0BD2234140820099D5AA /* StylableNavigationController.swift */,
+				8DFC0BD1234140810099D5AA /* UINavigationBar+Stylable.swift */,
+				8DFC0BD3234140820099D5AA /* UINavigationController+CompletionExtensions.swift */,
+			);
+			name = Classes;
+			path = StylableNavigationBar/Classes;
 			sourceTree = "<group>";
 		};
 		B6B920115B8D56AFB3BB6A67EDDEA1D3 /* Pods-StylableNavigationBar_Example */ = {
