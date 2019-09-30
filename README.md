@@ -3,10 +3,11 @@
 [![License](https://img.shields.io/cocoapods/l/StylableNavigationBar.svg?style=flat)](https://cocoapods.org/pods/StylableNavigationBar)
 [![Platform](https://img.shields.io/cocoapods/p/StylableNavigationBar.svg?style=flat)](https://cocoapods.org/pods/StylableNavigationBar)
 
+<img src="demo/demo.gif" width="100%">
+
 > 🧸 **StylableNavigationBar** provide a lightweight replacement for a standard **UINavigationController**, so you can easily manage your **navigation and status bar styles** throughout your iOS app
 
 ## Example
-![StylableNavigationBar Demo](demo/demo.gif)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
@@ -33,11 +34,69 @@ pod 'StylableNavigationBar'
 let navigationController = StylableNavigationController(rootViewController: childViewController)
 ```
 
-4. Define preffered bar style for child view controller by making its extension
+4. Define preffered bar style for child view controller by making its extension:
+
+```swift
+// MARK: Bar Style
+extension ViewController: NavigationBarStylable {
+    
+    var navigationBarStyle: NavigationControllerStyle? {
+        return .darkTinted(tintColor: .black)
+    }
+}
+```
+
+5. Done.
+
+## Navigation Bar Styling
+
+#### There are two ways to define navigation bar style
+1. Use predefined *NavigationControllerStyle* like `.darkTinted` `.lightTinted` and specify a tint color:
+
+```swift
+// MARK: Define Navigation Bar Style
+extension ViewController: NavigationBarStylable {
+    
+    var navigationBarStyle: NavigationControllerStyle? {
+        return .lightTinted(tintColor: .lightGray)
+    }
+}
+```
+
+2. Create your own style (e.g. `AppMainNavigationBarStyle`) conforming to `NavigationBarStyleProtocol`:
+
+```swift
+// MARK: Default Navigation Bar Style
+struct AppMainNavigationBarStyle: NavigationBarStyleProtocol {
+    var barColor: UIColor? = UIColor(named: "defaultBarColor")
+    var tintColor: UIColor = UIColor(named: "defaultTintColor") ?? UIColor()
+    var statusBarStyle: UIStatusBarStyle = .lightContent
+}
+
+class ViewController: UIViewController {
+    var barStyle: NavigationBarStyleProtocol = AppMainNavigationBarStyle()
+}
+
+// MARK: Define Navigation Bar Style
+extension ViewController: NavigationBarStylable {
+    
+    var navigationBarStyle: NavigationControllerStyle? {
+        return .custom(style: barStyle)
+    }
+}
+```
+
+## Roadmap
+
+- [x] Handle iOS 11 NavigationController's largeTitle
+- [ ] Add an ability to define image as a navigation bar's background
+- [ ] Allow to define title styles (e.g. two lines title etc.)
 
 ## Author
 
 Pavlo Chernovolenko, Linkedin
+
+*I will appreciate your contribution in case you have any ideas how to improve the component. Please raise issues if something is not working as expected.* 
 
 ## License
 
