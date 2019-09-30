@@ -1,5 +1,5 @@
 //
-//  RootTableViewController.swift
+//  ViewController.swift
 //  StylableNavigationControllerDemo
 //
 //  Created by Pavlo Chernovolenko on 9/29/19.
@@ -9,8 +9,9 @@
 import UIKit
 import StylableNavigationBar
 
-class RootTableViewController: UITableViewController {
+class ViewController: UITableViewController {
 
+    var viewModel: ViewModelProtocol = ViewModel()
     var barStyle: NavigationBarStyleProtocol = AppSecondaryNavigationBarStyle()
     
     private enum Constants {
@@ -18,49 +19,55 @@ class RootTableViewController: UITableViewController {
         static var controllerId = "RootViewController"
     }
     
-    static func makeViewController(barStyle: NavigationBarStyleProtocol) -> RootTableViewController? {
+    static func makeViewController(barStyle: NavigationBarStyleProtocol) -> ViewController? {
         let storyboard = UIStoryboard(name: Constants.storyboardName, bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: Constants.controllerId)
-        guard let tableController = controller as? RootTableViewController else { return nil }
+        guard let tableController = controller as? ViewController else { return nil }
         tableController.barStyle = barStyle
         return tableController
     }
 }
 
 // MARK: Table view data source
-extension RootTableViewController {
+extension ViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return viewModel.cellViewModels.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell") ?? UITableViewCell()
-        cell.textLabel?.text = "Title"
-        cell.detailTextLabel?.text = "Details"
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell") as? StyleCell
+        else { return UITableViewCell() }
+        let cellViewModel = viewModel.cellViewModels[indexPath.row]
+        cell.textLabel?.text = cellViewModel.title
+        cell.detailTextLabel?.text = cellViewModel.description
+        cell.colorExampleView.backgroundColor = cellViewModel.style.barColor
+        cell.textStyleExampleLabel.textColor = cellViewModel.style.tintColor
         return cell
     }
 }
 
 // MARK: Table view delegate
-extension RootTableViewController {
+extension ViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let style: NavigationBarStyleProtocol = (indexPath.row % 2 == 0) ? AppPrimaryNavigationBarStyle() : AppSecondaryNavigationBarStyle()
+        let cellViewModel = viewModel.cellViewModels[indexPath.row]
         guard
             let navigationController = self.navigationController,
-            let newController = RootTableViewController.makeViewController(barStyle: style)
+            let newController = ViewController.makeViewController(barStyle: cellViewModel.style)
         else { return }
+        newController.title = cellViewModel.title
         navigationController.pushViewController(newController, animated: true)
     }
 }
 
 // MARK: NavigationBarStylable
-extension RootTableViewController: NavigationBarStylable {
+extension ViewController: NavigationBarStylable {
     
     var navigationBarStyle: NavigationControllerStyle? {
         return .custom(style: barStyle)

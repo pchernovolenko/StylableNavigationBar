@@ -117,10 +117,14 @@ private extension StylableNavigationController {
             self.navigationBar.applyColors(barColor: nil, barTintColor: .black)
         case let .darkTinted(tintColor):
             self.navigationBar.applyColors(barColor: tintColor, barTintColor: .white)
+            self.view.backgroundColor = tintColor
         case let .lightTinted(tintColor):
             self.navigationBar.applyColors(barColor: tintColor, barTintColor: .black)
+            self.view.backgroundColor = tintColor
         case let .custom(style):
             self.navigationBar.applyStyle(style)
+            self.view.backgroundColor = style.barColor
         }
+        
     }
 }
