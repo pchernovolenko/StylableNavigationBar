@@ -94,7 +94,7 @@ extension ViewController: NavigationBarStylable {
 
 ## Author
 
-Pavlo Chernovolenko, Linkedin
+Pavlo Chernovolenko, [Linkedin](https://www.linkedin.com/in/pchernovolenko/)
 
 *I will appreciate your contribution in case you have any ideas how to improve the component. Please raise issues if something is not working as expected.* 
 
