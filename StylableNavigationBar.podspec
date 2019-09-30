@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StylableNavigationBar'
-  s.version          = '1.0.0'
-  s.swift_version = '5.0'
+  s.version          = '1.0.1'
+  s.swift_version    = '5.0'
   s.summary          = 'StylableNavigationBar allows you to easaly manage your navigation and status bar appearance'
   s.description      = <<-DESC
 StylableNavigationController is a UINavigationController subclass and with an ability to apply smooth color transitions between child view controllers. You can easaly create your own navigation bar styles and the StylableNavigationBar will handle status bar appearance and all the transitions for you. The only thing you have to do is to replace a standard UINavigationController with the StylableNavigationController and provide a style info for child controllers
