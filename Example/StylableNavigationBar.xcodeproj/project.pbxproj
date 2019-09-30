@@ -10,7 +10,10 @@
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		8DFC0BDD234140AE0099D5AA /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC0BDC234140AE0099D5AA /* RootTableViewController.swift */; };
+		8D6F30A82341FBAA006C8C80 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F30A72341FBAA006C8C80 /* ViewModel.swift */; };
+		8D6F30AB234208BE006C8C80 /* StyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F30AA234208BE006C8C80 /* StyleCell.swift */; };
+		8D6F30AD23420B12006C8C80 /* AppBlackNavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F30AC23420B12006C8C80 /* AppBlackNavigationBarStyle.swift */; };
+		8DFC0BDD234140AE0099D5AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC0BDC234140AE0099D5AA /* ViewController.swift */; };
 		8DFC0BE0234140BE0099D5AA /* AppSecondaryNavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC0BDE234140BE0099D5AA /* AppSecondaryNavigationBarStyle.swift */; };
 		8DFC0BE1234140BE0099D5AA /* AppPrimaryNavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC0BDF234140BE0099D5AA /* AppPrimaryNavigationBarStyle.swift */; };
 		8DFC0BE3234140D30099D5AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DFC0BE2234140D30099D5AA /* Assets.xcassets */; };
@@ -43,7 +46,10 @@
 		60BF4079DE1EE831939C8D5D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		67239BF829D1CD137440EBBD /* Pods-StylableNavigationBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StylableNavigationBar_Tests.release.xcconfig"; path = "Target Support Files/Pods-StylableNavigationBar_Tests/Pods-StylableNavigationBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		805DC4252CDFB8321E464FE9 /* Pods-StylableNavigationBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StylableNavigationBar_Tests.debug.xcconfig"; path = "Target Support Files/Pods-StylableNavigationBar_Tests/Pods-StylableNavigationBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		8DFC0BDC234140AE0099D5AA /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
+		8D6F30A72341FBAA006C8C80 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8D6F30AA234208BE006C8C80 /* StyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleCell.swift; sourceTree = "<group>"; };
+		8D6F30AC23420B12006C8C80 /* AppBlackNavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBlackNavigationBarStyle.swift; sourceTree = "<group>"; };
+		8DFC0BDC234140AE0099D5AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8DFC0BDE234140BE0099D5AA /* AppSecondaryNavigationBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSecondaryNavigationBarStyle.swift; sourceTree = "<group>"; };
 		8DFC0BDF234140BE0099D5AA /* AppPrimaryNavigationBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPrimaryNavigationBarStyle.swift; sourceTree = "<group>"; };
 		8DFC0BE2234140D30099D5AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,9 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				8DFC0BDC234140AE0099D5AA /* RootTableViewController.swift */,
-				8DFC0BDF234140BE0099D5AA /* AppPrimaryNavigationBarStyle.swift */,
-				8DFC0BDE234140BE0099D5AA /* AppSecondaryNavigationBarStyle.swift */,
+				8D6F30A52341FB41006C8C80 /* ViewController */,
+				8D6F30A62341FB56006C8C80 /* AppNavigationBarStyles */,
 				8DFC0BE4234140F80099D5AA /* Main.storyboard */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				8DFC0BE2234140D30099D5AA /* Assets.xcassets */,
@@ -154,6 +159,34 @@
 				60BF4079DE1EE831939C8D5D /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		8D6F30A52341FB41006C8C80 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D6F30A92342089B006C8C80 /* Cells */,
+				8DFC0BDC234140AE0099D5AA /* ViewController.swift */,
+				8D6F30A72341FBAA006C8C80 /* ViewModel.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		8D6F30A62341FB56006C8C80 /* AppNavigationBarStyles */ = {
+			isa = PBXGroup;
+			children = (
+				8DFC0BDF234140BE0099D5AA /* AppPrimaryNavigationBarStyle.swift */,
+				8DFC0BDE234140BE0099D5AA /* AppSecondaryNavigationBarStyle.swift */,
+				8D6F30AC23420B12006C8C80 /* AppBlackNavigationBarStyle.swift */,
+			);
+			name = AppNavigationBarStyles;
+			sourceTree = "<group>";
+		};
+		8D6F30A92342089B006C8C80 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8D6F30AA234208BE006C8C80 /* StyleCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		9F20DABEF51A25763DA0903C /* Frameworks */ = {
@@ -337,10 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6F30AD23420B12006C8C80 /* AppBlackNavigationBarStyle.swift in Sources */,
+				8D6F30A82341FBAA006C8C80 /* ViewModel.swift in Sources */,
 				8DFC0BE1234140BE0099D5AA /* AppPrimaryNavigationBarStyle.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				8DFC0BE0234140BE0099D5AA /* AppSecondaryNavigationBarStyle.swift in Sources */,
-				8DFC0BDD234140AE0099D5AA /* RootTableViewController.swift in Sources */,
+				8DFC0BDD234140AE0099D5AA /* ViewController.swift in Sources */,
+				8D6F30AB234208BE006C8C80 /* StyleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StylableNavigationBar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -495,7 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StylableNavigationBar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

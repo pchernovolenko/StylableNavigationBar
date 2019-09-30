@@ -11,16 +11,22 @@ import UIKit
 extension UINavigationBar {
     
     func applyStyle(_ style: NavigationBarStyleProtocol) {
-        applyColors(barColor: style.barColor, barTintColor: style.tintColor)
+        applyColors(
+            barColor: style.barColor,
+            barTintColor: style.tintColor
+        )
     }
     
     func applyColors(barColor: UIColor?, barTintColor: UIColor) {
         self.isTranslucent = false
         self.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: barTintColor,
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)
+            NSAttributedString.Key.foregroundColor: barTintColor
         ]
         self.tintColor = barTintColor
         self.barTintColor = barColor
+        guard #available(iOS 11.0, *) else { return }
+        self.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: barTintColor
+        ]
     }
 }
