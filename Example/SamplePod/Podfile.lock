@@ -1,0 +1,16 @@
+PODS:
+  - StylableNavigationBar (1.0.1)
+
+DEPENDENCIES:
+  - StylableNavigationBar (from `../`)
+
+EXTERNAL SOURCES:
+  StylableNavigationBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  StylableNavigationBar: 7119a14a0cbc7c23e341dc9d145f7b6b5d724f1f
+
+PODFILE CHECKSUM: dccde8740708d36166b714bf4610a587167d78ce
+
+COCOAPODS: 1.8.4
