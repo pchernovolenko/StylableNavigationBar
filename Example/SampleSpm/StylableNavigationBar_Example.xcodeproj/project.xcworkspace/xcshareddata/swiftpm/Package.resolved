@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "StylableNavigationBar",
+        "repositoryURL": "https://github.com/bfernandesbfs/StylableNavigationBar",
+        "state": {
+          "branch": "spm",
+          "revision": "c84c26a25649b407261bfae632dc5a5ad08d0b24",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
