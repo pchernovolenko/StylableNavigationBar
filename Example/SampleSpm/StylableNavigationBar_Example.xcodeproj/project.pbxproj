@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		653626442362192400D582F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653626432362192400D582F2 /* AppDelegate.swift */; };
+		653626482362192400D582F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653626472362192400D582F2 /* ViewController.swift */; };
+		6536264B2362192400D582F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653626492362192400D582F2 /* Main.storyboard */; };
+		6536264D2362192500D582F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6536264C2362192500D582F2 /* Assets.xcassets */; };
+		653626502362192500D582F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6536264E2362192500D582F2 /* LaunchScreen.storyboard */; };
+		653626592362199500D582F2 /* StylableNavigationBar in Frameworks */ = {isa = PBXBuildFile; productRef = 653626582362199500D582F2 /* StylableNavigationBar */; };
+		6536265D23621A9C00D582F2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536265C23621A9B00D582F2 /* ViewModel.swift */; };
+		6536265F23621AAD00D582F2 /* StyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536265E23621AAD00D582F2 /* StyleCell.swift */; };
+		6536266423621AD600D582F2 /* AppSecondaryNavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536266123621AD600D582F2 /* AppSecondaryNavigationBarStyle.swift */; };
+		6536266523621AD600D582F2 /* AppBlackNavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536266223621AD600D582F2 /* AppBlackNavigationBarStyle.swift */; };
+		6536266623621AD600D582F2 /* AppPrimaryNavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536266323621AD600D582F2 /* AppPrimaryNavigationBarStyle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		653626402362192400D582F2 /* StylableNavigationBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StylableNavigationBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		653626432362192400D582F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		653626472362192400D582F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6536264A2362192400D582F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6536264C2362192500D582F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6536264F2362192500D582F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		653626512362192500D582F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6536265C23621A9B00D582F2 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6536265E23621AAD00D582F2 /* StyleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleCell.swift; sourceTree = "<group>"; };
+		6536266123621AD600D582F2 /* AppSecondaryNavigationBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSecondaryNavigationBarStyle.swift; sourceTree = "<group>"; };
+		6536266223621AD600D582F2 /* AppBlackNavigationBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBlackNavigationBarStyle.swift; sourceTree = "<group>"; };
+		6536266323621AD600D582F2 /* AppPrimaryNavigationBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPrimaryNavigationBarStyle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6536263D2362192400D582F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653626592362199500D582F2 /* StylableNavigationBar in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		653626372362192400D582F2 = {
+			isa = PBXGroup;
+			children = (
+				653626422362192400D582F2 /* StylableNavigationBar_Example */,
+				653626412362192400D582F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		653626412362192400D582F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				653626402362192400D582F2 /* StylableNavigationBar_Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		653626422362192400D582F2 /* StylableNavigationBar_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6536266023621ABA00D582F2 /* Styles */,
+				6536265A236219FF00D582F2 /* Controller */,
+				653626432362192400D582F2 /* AppDelegate.swift */,
+				653626492362192400D582F2 /* Main.storyboard */,
+				6536264C2362192500D582F2 /* Assets.xcassets */,
+				6536264E2362192500D582F2 /* LaunchScreen.storyboard */,
+				653626512362192500D582F2 /* Info.plist */,
+			);
+			path = StylableNavigationBar_Example;
+			sourceTree = "<group>";
+		};
+		6536265A236219FF00D582F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				653626472362192400D582F2 /* ViewController.swift */,
+				6536265C23621A9B00D582F2 /* ViewModel.swift */,
+				6536265B23621A0C00D582F2 /* Cell */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6536265B23621A0C00D582F2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6536265E23621AAD00D582F2 /* StyleCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6536266023621ABA00D582F2 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				6536266223621AD600D582F2 /* AppBlackNavigationBarStyle.swift */,
+				6536266323621AD600D582F2 /* AppPrimaryNavigationBarStyle.swift */,
+				6536266123621AD600D582F2 /* AppSecondaryNavigationBarStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6536263F2362192400D582F2 /* StylableNavigationBar_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 653626542362192500D582F2 /* Build configuration list for PBXNativeTarget "StylableNavigationBar_Example" */;
+			buildPhases = (
+				6536263C2362192400D582F2 /* Sources */,
+				6536263D2362192400D582F2 /* Frameworks */,
+				6536263E2362192400D582F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StylableNavigationBar_Example;
+			packageProductDependencies = (
+				653626582362199500D582F2 /* StylableNavigationBar */,
+			);
+			productName = StylableNavigationBar_Example;
+			productReference = 653626402362192400D582F2 /* StylableNavigationBar_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		653626382362192400D582F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = CocoaPods;
+				TargetAttributes = {
+					6536263F2362192400D582F2 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 6536263B2362192400D582F2 /* Build configuration list for PBXProject "StylableNavigationBar_Example" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 653626372362192400D582F2;
+			packageReferences = (
+				653626572362199500D582F2 /* XCRemoteSwiftPackageReference "StylableNavigationBar" */,
+			);
+			productRefGroup = 653626412362192400D582F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6536263F2362192400D582F2 /* StylableNavigationBar_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6536263E2362192400D582F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653626502362192500D582F2 /* LaunchScreen.storyboard in Resources */,
+				6536264D2362192500D582F2 /* Assets.xcassets in Resources */,
+				6536264B2362192400D582F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6536263C2362192400D582F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6536266623621AD600D582F2 /* AppPrimaryNavigationBarStyle.swift in Sources */,
+				6536266523621AD600D582F2 /* AppBlackNavigationBarStyle.swift in Sources */,
+				653626482362192400D582F2 /* ViewController.swift in Sources */,
+				6536266423621AD600D582F2 /* AppSecondaryNavigationBarStyle.swift in Sources */,
+				6536265D23621A9C00D582F2 /* ViewModel.swift in Sources */,
+				653626442362192400D582F2 /* AppDelegate.swift in Sources */,
+				6536265F23621AAD00D582F2 /* StyleCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		653626492362192400D582F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6536264A2362192400D582F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6536264E2362192500D582F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6536264F2362192500D582F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		653626522362192500D582F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		653626532362192500D582F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		653626552362192500D582F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StylableNavigationBar_Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.StylableNavigationBar-Example.StylableNavigationBar-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		653626562362192500D582F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StylableNavigationBar_Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.StylableNavigationBar-Example.StylableNavigationBar-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6536263B2362192400D582F2 /* Build configuration list for PBXProject "StylableNavigationBar_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653626522362192500D582F2 /* Debug */,
+				653626532362192500D582F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		653626542362192500D582F2 /* Build configuration list for PBXNativeTarget "StylableNavigationBar_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				653626552362192500D582F2 /* Debug */,
+				653626562362192500D582F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		653626572362199500D582F2 /* XCRemoteSwiftPackageReference "StylableNavigationBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bfernandesbfs/StylableNavigationBar";
+			requirement = {
+				branch = spm;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		653626582362199500D582F2 /* StylableNavigationBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 653626572362199500D582F2 /* XCRemoteSwiftPackageReference "StylableNavigationBar" */;
+			productName = StylableNavigationBar;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 653626382362192400D582F2 /* Project object */;
+}
